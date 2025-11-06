@@ -25,7 +25,7 @@
 #include <cstring>
 #endif
 
-#ifdef USE_ADAFRUIT_GFX
+#define USE_ADAFRUIT_GFX
 #include <Adafruit_GFX.h>
 class LEDMatrixDriver: public Adafruit_GFX
 #else
@@ -128,3 +128,4 @@ class LEDMatrixDriver
 };
 
 #endif /* LEDMATRIXDRIVER_H_ */
+
