@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Hero Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Gamified Progress</p>
+          <h1>Habit Hero Tracker</h1>
+          <p class="subtitle">
+            Track your daily wins, maintain streaks, and stay motivated with powerful visual feedback.
+          </p>
+        </div>
+        <form id="habit-form" class="habit-form">
+          <input id="habit-name" type="text" placeholder="Add new habit (e.g., Drink Water)" maxlength="30" required />
+          <button type="submit">+ Add Habit</button>
+        </form>
+      </header>
+
+      <section class="cards">
+        <article class="card metric">
+          <h2>Monthly Completion</h2>
+          <p id="completion-rate">0%</p>
+        </article>
+        <article class="card metric">
+          <h2>Current Streak</h2>
+          <p id="current-streak">0 days</p>
+        </article>
+        <article class="card metric">
+          <h2>Best Streak</h2>
+          <p id="best-streak">0 days</p>
+        </article>
+      </section>
+
+      <section class="charts-layout">
+        <article class="card">
+          <h2>Overall Monthly Progress</h2>
+          <canvas id="progress-pie"></canvas>
+        </article>
+        <article class="card">
+          <h2>Completion by Habit</h2>
+          <canvas id="habit-bars"></canvas>
+        </article>
+      </section>
+
+      <section class="card tracker-card">
+        <div class="tracker-head">
+          <h2>Daily Habit Board</h2>
+          <div class="legend">
+            <span class="dot low"></span> Low
+            <span class="dot mid"></span> Mid
+            <span class="dot high"></span> High
+          </div>
+        </div>
+        <div id="tracker-grid" class="tracker-grid"></div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
