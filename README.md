@@ -33,3 +33,16 @@ Recommended pins for Arduino Uno:
 - Søren Thing Andersen - support for 7-seg displays with examples
 - Scott Baker - examples clean-up
 - James Gohl - module reversal concept and some code, another example
+
+## Habit Tracker Demo (Web)
+A simple interactive habit tracker web app is available in `habit-tracker/`.
+
+### Run locally
+Open `habit-tracker/index.html` in a browser, or serve with any static server.
+
+Features:
+- Add/remove habits.
+- Track completion for 30 days with checkboxes.
+- Doughnut chart for overall completion.
+- Bar chart for per-habit completion.
+- Color-graded habit rows (low/mid/high consistency).
